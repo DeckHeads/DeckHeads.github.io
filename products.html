@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+	<title>Deck Heads - Products</title>
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="UTF-8">
+</head>
+<body>
+<!--Navigation Bar-->
+	<div class="navBar">
+<!--Logo-->
+		<img class="logo" src="images/DH_logo.png" alt="Deck Heads" draggable="false">
+<!--Menu-->
+		<ul id="navMenu">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li class="navCur">Products</li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
+<!--Hero Image-->
+	<div>
+		<img id="heroImg" src="images/hero_4.jpg" alt="Deck Picture">
+	</div>
+<!--Wrapper-->
+	<div id="wrapper">
+		<div class="prodInfo">
+			<p>
+				<u>Important Information</u>
+				<br><br>
+				Some decks may be exempt from development and or building approval, for more information click <a class="link" href="http://www.planning.act.gov.au/topics/design-and-build/da_assessment/exempt_work/process/decks">here.</a>
+			</p>
+		</div>
+<!--Product 1-->
+		<div class="prodLeft">
+			<table class="prodTable">
+				<tr class="desc">
+					<td rowspan = "4">
+						<p>Merbau</p>
+					</td>
+					<td>
+						<img class="prodImg" src="images/merbau.jpg" alt="Merbau Deck">
+					</td>
+				</tr>				
+				<tr class="calc">
+					<td>
+						Enter Length(meters): <input type="text" name="length" value="" id="prod1Len"><br><br>
+						Enter Width  (meters): <input type="text" name="width" value="" id="prod1Wid">
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						<br>
+						<button type="button" onclick="calcProd1()">Calculate Price</button>
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						Approximate price: <p class="prodCost" id="prod1Cost">$0.00</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!--Product 2-->
+		<div class="prodRight">
+			<table class="prodTable">
+				<tr class="desc">
+					<td rowspan = "4">
+						<p>Pine</p>
+					</td>
+					<td>
+						<img class="prodImg" src="images/pine.jpg" alt="Pine Deck">
+					</td>
+				</tr>				
+				<tr class="calc">
+					<td>
+						Enter Length(meters): <input type="text" name="length" value="" id="prod2Len"><br><br>
+						Enter Width  (meters): <input type="text" name="width" value="" id="prod2Wid">
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						<br>
+						<button type="button" onclick="calcProd2()">Calculate Price</button>
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						Approximate price: <p class="prodCost" id="prod2Cost">$0.00</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!--Product 3-->
+		<div class="prodLeft">
+			<table class="prodTable">
+				<tr class="desc">
+					<td rowspan = "4">
+						<p>EkoDeck</p>
+					</td>
+					<td>
+						<img class="prodImg" src="images/ekodeck.jpg" alt="EkoDeck Samples">
+					</td>
+				</tr>				
+				<tr class="calc">
+					<td>
+						Enter Length(meters): <input type="text" name="length" value="" id="prod3Len"><br><br>
+						Enter Width  (meters): <input type="text" name="width" value="" id="prod3Wid">
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						<br>
+						<button type="button" onclick="calcProd3()">Calculate Price</button>
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						Approximate price: <p class="prodCost" id="prod3Cost">$0.00</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!--Product 4-->
+		<div class="prodRight">
+			<table class="prodTable">
+				<tr class="desc">
+					<td rowspan = "4">
+						<p>Merbau</p>
+					</td>
+					<td>
+						<img class="prodImg" src="images/merbau.jpg" alt="Placeholder">
+					</td>
+				</tr>				
+				<tr class="calc">
+					<td>
+						Enter Length(meters): <input type="text" name="length" value="" id="prod4Len"><br><br>
+						Enter Width  (meters): <input type="text" name="width" value="" id="prod4Wid">
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						<br>
+						<button type="button" onclick="calcProd4()">Calculate Price</button>
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						Approximate price: <p class="prodCost" id="prod4Cost">$0.00</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!--Product 5-->
+		<div class="prodLeft">
+			<table class="prodTable">
+				<tr class="desc">
+					<td rowspan = "4">
+						<p>Merbau</p>
+					</td>
+					<td>
+						<img class="prodImg" src="images/merbau.jpg" alt="Placeholder">
+					</td>
+				</tr>				
+				<tr class="calc">
+					<td>
+						Enter Length(meters): <input type="text" name="length" value="" id="prod5Len"><br><br>
+						Enter Width  (meters): <input type="text" name="width" value="" id="prod5Wid">
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						<br>
+						<button type="button" onclick="calcProd5()">Calculate Price</button>
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						Approximate price: <p class="prodCost" id="prod5Cost">$0.00</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!--Product 6-->
+		<div class="prodRight" style="margin-bottom:95px;">
+			<table class="prodTable">
+				<tr class="desc">
+					<td rowspan = "4">
+						<p>Merbau</p>
+					</td>
+					<td>
+						<img class="prodImg" src="images/merbau.jpg" alt="Placeholder">
+					</td>
+				</tr>				
+				<tr class="calc">
+					<td>
+						Enter Length(meters): <input type="text" name="length" value="" id="prod6Len"><br><br>
+						Enter Width  (meters): <input type="text" name="width" value="" id="prod6Wid">
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						<br>
+						<button type="button" onclick="calcProd6()">Calculate Price</button>
+					</td>
+				</tr>
+				<tr class="calc">
+					<td>
+						Approximate price: <p class="prodCost" id="prod6Cost">$0.00</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+<!--Footer-->
+		<div id="miniWrapper">
+		</div>
+		<div style="text-align: right; color:#ffffff; font-weight:bold;">
+			&#169; Deck Heads 2017
+		</div>
+	</div>
+<script src="dhScript.js"></script>
+</body>
+</html>
