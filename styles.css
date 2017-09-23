@@ -1,25 +1,28 @@
 @media only screen and (max-width: 1334px) {
     ul#navMenu li{
-    	font-size: 25px;
-    }
-}
+    	font-size: 27px;
+    	}
+        ul#navMenu{
+    	margin-top:5px;
+    	}
+	}
 
 * {
 	margin: 0;
 	padding: 0;
 	font-family: Arial;
-}
-a.link {
-	color: #fb9601;
 	-o-transition:.3s;
 	-ms-transition:.3s;
 	-moz-transition:.3s;
 	-webkit-transition:.3s;
 	transition:.3s
-}
+	}
+a.link {
+	color: #fb9601;
+	}
 a.link:hover {
 	color: #000000;
-}
+	}
 /**Navigation Bar**/
 .navBar{
 	position: fixed;
@@ -34,11 +37,6 @@ a.link:hover {
 	opacity:.9;
 	box-shadow: 0px 0px 15px #000000;
 	z-index: 1;
-	-o-transition:.4s;
-	-ms-transition:.4s;
-	-moz-transition:.4s;
-	-webkit-transition:.4s;
-	transition:.4s
 	}
 .navBar:after{
 	position: absolute;
@@ -82,11 +80,6 @@ ul#navMenu li{
 ul#navMenu li a{
 	text-decoration:none;
 	color: #fb9601;
-	-o-transition:.3s;
-	-ms-transition:.3s;
-	-moz-transition:.3s;
-	-webkit-transition:.3s;
-	transition:.3s;
 	}
 ul#navMenu li a:hover{
 	color: white;
@@ -126,14 +119,10 @@ p{
 	position:relative;
 	height: 200px;
 	width:	100%;
+	bottom: 0px;
 	margin-top:50px;
 	background: white;
 	clear:both;
-	-o-transition:.5s;
-	-ms-transition:.5s;
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
-	transition:.5s;
 	}
 #miniWrapper:after{
 	position: absolute;
@@ -153,6 +142,7 @@ p{
 #footer{
 	width: 100%;
 	height: 50px;
+	bottom:0px;
 	background: white;
 	font-size: 12px;
 	}
@@ -262,11 +252,6 @@ button {
     font-weight: bold;
     cursor: pointer;
 	width: 80%;
-	-o-transition:.3s;
-	-ms-transition:.3s;
-	-moz-transition:.3s;
-	-webkit-transition:.3s;
-	transition:.3s;
 	}
 button:hover{
 	background-color: #FFFFFF;
@@ -308,11 +293,6 @@ button:focus{
 .im-single img {
 	width:100%;
 	height:100%;
-	-o-transition:.2s;
-	-ms-transition:.2s;
-	-moz-transition:.2s;
-	-webkit-transition:.2s;
-	transition:.2s;
 	}
 .im-single img:hover {
 	width:105%;
