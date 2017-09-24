@@ -2,8 +2,11 @@
     ul#navMenu li{
     	font-size: 27px;
     	}
-        ul#navMenu{
+    ul#navMenu{
     	margin-top:5px;
+    	}
+   	#mainRight{
+    	margin-bottom: 1000px;
     	}
 	}
 
@@ -135,7 +138,7 @@ p{
 #mainLeft{
 	position: relative;
 	width: 54%;
-	height:700px;
+	height:452px;
 	top: 55px;
 	margin-left: 3.33%;
 	background-color:white;
@@ -146,7 +149,7 @@ p{
 #mainRight{
 	position: relative;
 	width: 36%;
-	height:700px;
+	height:452px;
 	margin-top: 55px;
 	margin-bottom:145px;
 	margin-right: 3.33%;
