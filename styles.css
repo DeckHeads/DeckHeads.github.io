@@ -15,7 +15,7 @@
 	-ms-transition:.3s;
 	-moz-transition:.3s;
 	-webkit-transition:.3s;
-	transition:.3s
+	transition:.3s;
 	}
 a.link {
 	color: #fb9601;
@@ -57,19 +57,9 @@ a.link:hover {
 img#logo{
 	float:left;
 	}
-img {
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-o-user-select: none;
-	user-select: none;
-	}
 ul#navMenu{
 	list-style: none;
 	float: right;
-	-webkit-user-select: none;       
-	-moz-user-select: none;
-	-ms-user-select: none; 
 	user-select: none;
 	}
 ul#navMenu li{
@@ -78,7 +68,7 @@ ul#navMenu li{
 	font-weight: bold;
 	}
 ul#navMenu li a{
-	text-decoration:none;
+	text-decoration: none;
 	color: #fb9601;
 	}
 ul#navMenu li a:hover{
@@ -89,10 +79,6 @@ ul#navMenu li a:hover{
 	color: white;
 	cursor: pointer;
 	text-shadow: 0px 0px 20px black;
-	-webkit-user-select: none;       
-	-moz-user-select: none;
-	-ms-user-select: none; 
-	user-select: none;
 	}
 /**General Layout**/
 #heroImg {
@@ -115,16 +101,16 @@ p{
 	padding:20px;
 	}
 /**Footer**/
-#miniWrapper {
+.miniWrapper {
 	position:relative;
 	height: 200px;
 	width:	100%;
 	bottom: 0px;
 	margin-top:50px;
 	background: white;
-	clear:both;
+	clear: both;
 	}
-#miniWrapper:after{
+.miniWrapper:after{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -139,18 +125,17 @@ p{
 	content: '';
 	z-index: -1;
     }﻿
-#footer{
+.footer{
 	width: 100%;
-	height: 50px;
-	bottom:0px;
-	background: white;
-	font-size: 12px;
+	text-align: right; 
+	color:#ffffff; 
+	font-weight:bold;
 	}
 /**Home Layout**/
 #mainLeft{
 	position: relative;
 	width: 54%;
-	height:452.5px;
+	height:700px;
 	top: 55px;
 	margin-left: 3.33%;
 	background-color:white;
@@ -161,7 +146,7 @@ p{
 #mainRight{
 	position: relative;
 	width: 36%;
-	height: 452.5px;
+	height:700px;
 	margin-top: 55px;
 	margin-bottom:145px;
 	margin-right: 3.33%;
