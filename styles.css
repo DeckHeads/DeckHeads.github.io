@@ -5,6 +5,9 @@
     ul#navMenu{
     	margin-top:5px;
     	}
+    #footerExtraPad{
+		height: 650px;
+		}
 	}
 * {
 	margin: 0;
@@ -90,12 +93,14 @@ ul#navMenu li a:hover{
 	box-shadow: 0px 0px 15px #000000;
 	z-index:1;
 	}
+#heroImg img {
+	width: 100%;
+		height: 350px;
+}
 #wrapper{
 	position: absolute;
-	top:350px;
 	width: 100%;
 	height: auto;
-	min-height:100%;
 	min-width: 750px;
 	background-color: gray;
 	z-index:-1;
@@ -104,9 +109,8 @@ ul#navMenu li a:hover{
 #mainLeft{
 	position: relative;
 	width: 54%;
-	height: 452px;
-	top: 55px;
-	margin-bottom:145px;
+	height: 750px;
+	margin-top: 55px;
 	margin-left: 3.33%;
 	background-color: #ffffff;
 	border-radius: 10px 0px 0px 10px;
@@ -116,9 +120,8 @@ ul#navMenu li a:hover{
 #mainRight{
 	position: relative;
 	width: 36%;
-	height:452px;
+	height: 750px;
 	margin-top: 55px;
-	margin-bottom:145px;
 	margin-right: 3.33%;
 	background-color: #ffffff;
 	border-radius: 0px 10px 10px 0px;
@@ -140,6 +143,7 @@ p.prodCost{
 	text-align: right;
 	}
 .prodInfo{
+	position: relative;
 	background-color: white;
 	font-size:25px;
 	font-weight: bold;
@@ -164,6 +168,7 @@ p.prodCost{
 	box-shadow: 0px 0px 1px #000000;
 	float: left;
 	z-index: -2;
+	clear:both;
 	}
 .prodRight{
 	position: relative;
@@ -226,7 +231,6 @@ button:focus{
 	width: 93.334%;
 	height: 100%;
 	margin-top:55px;
-	margin-bottom:300px;
 	margin-left:3.33%;
 	border-radius: 10px 10px 10px 10px;
 	box-shadow: 0px 0px 1px #000000;	
@@ -262,16 +266,16 @@ iframe{
 	border:0;
 	}
 /**Footer**/
-.footerPad {
-	height: 1870px;
-	}
+.footerPad{
+	clear: both;
+	height: 250px;
+}
 .miniWrapper {
 	position: absolute;
 	width: 100%;
 	bottom: 0px;
 	height: 100px;
 	background: white;
-
 	}
 .miniWrapper:after{
 	position: absolute;
