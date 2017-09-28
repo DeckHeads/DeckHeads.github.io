@@ -6,6 +6,13 @@ var tax = 1.1;
 var delivery = 200;
 var mod = 2.2;
 
+
+var img = document.getElementById("myImg");
+var modal = document.getElementById('galDisplay');
+var galImg = document.getElementById('galImage');
+var captionText = document.getElementById("caption");
+var imgExt = img.src.replace(".jpg", "_HR.jpg");
+
 function calcProd1() {
 	var dPrice = 0;
 	/*Get dimentions*/
@@ -78,4 +85,18 @@ function calcProd6() {
 	var dOutput = dPrice.toFixed(2);
 	/*Display Price*/	
 	document.getElementById("prod6Cost").innerHTML = "$" + dOutput;
+}
+
+
+img.onclick = function() {myFunction()};
+
+function myFunction() {
+	galImg.src = imgExt;
+    modal.style.display = "Block";
+    captionText.innerHTML = img.alt;
+}
+
+modal.onclick = function() {closeModal()};
+function closeModal() {
+    modal.style.display = "none";
 }
