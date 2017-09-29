@@ -291,8 +291,8 @@ iframe{
 	border:0;
 	}
 .prev, .next, .close {
- 	color: white; 
- 	font-size: 80px; 
+ 	color: grey; 
+ 	font-size: 60px; 
  	font-weight: bold; 
  	user-select: none;
  	-webkit-user-select: none; 
@@ -303,23 +303,31 @@ iframe{
   	width: auto;
   	border-radius: 0 3px 3px 0;
   	z-index: 3;
+  	background-color: white;
+  	opacity: 0.4;
+
 	}
 .prev {
-	padding-left:27vw;
+	padding-left:20vw;
+	border-radius: 0 8px 8px 0;
 }
 .next {
   	right: 0;
-  	border-radius: 3px 0 0 3px;
-    padding-right:27vw;
+  	border-radius: 8px 0 0 8px;
+    padding-right:20vw;
 	}
 .close {
 	top: 5vh;
-	right:5vw;
+	right:5vh;
 	padding-right:0;
 	padding-left:0;
 	font-size: 60px;
+	text-align: center;
+	width: 60px;
+	border-radius: 8px 8px 8px 8px;
 	}
 .prev:hover, .next:hover, .close:hover {
+	opacity: 0.9;
 	color: #fb9601; 
 	}
 
@@ -336,6 +344,7 @@ iframe{
 		}
 	#imgCaption {
 		background-color: black;
+		opacity:0.8;
 		position: absolute;
     	top: 0px;
     	font-size:27px;
