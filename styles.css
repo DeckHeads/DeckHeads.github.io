@@ -8,9 +8,6 @@
 	-webkit-transition:.25s;
 	transition:.25s;
 	}
-html{
-	height:100%;
-}
 p{
 	padding:20px;
 	}
@@ -293,6 +290,38 @@ iframe{
 	height:315px;
 	border:0;
 	}
+.prev, .next, .close {
+ 	color: white; 
+ 	font-size: 80px; 
+ 	font-weight: bold; 
+ 	user-select: none;
+ 	-webkit-user-select: none; 
+ 	cursor: pointer; 
+ 	text-shadow: 0px 0px 8px #000000; 
+  	position: absolute;
+  	top: 83.5vh;
+  	width: auto;
+  	border-radius: 0 3px 3px 0;
+  	z-index: 3;
+	}
+.prev {
+	padding-left:27vw;
+}
+.next {
+  	right: 0;
+  	border-radius: 3px 0 0 3px;
+    padding-right:27vw;
+	}
+.close {
+	top: 5vh;
+	right:5vw;
+	padding-right:0;
+	padding-left:0;
+	}
+.prev:hover, .next:hover, .close:hover {
+	color: #fb9601; 
+	}
+
 /**Mobile Displays**/
 @media only screen and (min-width:1px) and (max-width: 1334px) {
     .modalImgBox {

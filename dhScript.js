@@ -80,33 +80,35 @@ function calcProd6() {
 	document.getElementById("prod6Cost").innerHTML = "$" + dOutput;
 }
 
+/*Gallery!*/
+var galImg = document.getElementById('modalImg'); 								/*select the <img> tag for use later*/
+var captionText = document.getElementById("imgCaption"); 						/*select the caption div for use later*/
+var slides = document.getElementsByClassName("im-single"); 						/*create an index of slides*/
+var slideIndex = 0;																/*Keep track of the current slide*/
 
-var galImg = document.getElementById('modalImg');
-var captionText = document.getElementById("imgCaption");
-var slides = document.getElementsByClassName("im-single");
-
-var slideIndex = 0;
-
-function selectImg(n) {
-	slideIndex = n;
-	showModal()
-	galImg.src = slides[n].children[0].src.replace(".jpg", "_HR.jpg");
-	captionText.innerHTML =  slides[n].children[0].alt + " " + slideIndex;
+function selectImg(n) { 														/*when image clicked, take the slide number from html*/
+	slideIndex = n;																/*is used when changing slide*/
+	if(document.getElementById('modalDisp').style.display = "none")				/*avoid doing the next step for no reason*/
+	{
+		showModal()																/*show the gallery*/
+	}
+	galImg.src = slides[n].children[0].src.replace(".jpg", "_HR.jpg");			/*set the gallery <img> tag to the _HR.jpg (hi rez) varient of an image */
+	captionText.innerHTML =  slides[n].children[0].alt + " " + slideIndex;		/*set caption to the image's alt="text"*/
 }
 
-function nextSlide() {
+function nextSlide() {															/*do i need to explain this? checks we aren't at an index that would result in null*/
 	if(slideIndex <= (slides.length - 1))
 	{
-	slideIndex = slideIndex + 1;
+	slideIndex = slideIndex + 1;												/*add 1 to slideIndex (to get the next slide later)*/
 		if(slideIndex == slides.length)
 		{
-		slideIndex = 0;
+		slideIndex = 0;															/*if we went outside the boundry, start from the beginning*/
 		}
 	}
-	selectImg(slideIndex)
+	selectImg(slideIndex)														/*show the image relating to the new slideIndex value*/
 }
 
-function prevSlide() {
+function prevSlide() {															/*same as above really*/
 	if(slideIndex >= 0)
 	{
 	slideIndex = slideIndex - 1;
