@@ -6,13 +6,6 @@ var tax = 1.1;
 var delivery = 200;
 var mod = 2.2;
 
-
-var img = document.getElementById("myImg");
-var modal = document.getElementById('galDisplay');
-var galImg = document.getElementById('galImage');
-var captionText = document.getElementById("caption");
-var imgExt = img.src.replace(".jpg", "_HR.jpg");
-
 function calcProd1() {
 	var dPrice = 0;
 	/*Get dimentions*/
@@ -88,15 +81,53 @@ function calcProd6() {
 }
 
 
-img.onclick = function() {myFunction()};
+var galImg = document.getElementById('modalImg');
+var captionText = document.getElementById("imgCaption");
+var slides = document.getElementsByClassName("im-single");
 
-function myFunction() {
-	galImg.src = imgExt;
-    modal.style.display = "Block";
-    captionText.innerHTML = img.alt;
+var slideIndex;
+
+function currentSlide(n) {
+slideIndex = n;
 }
 
-modal.onclick = function() {closeModal()};
-function closeModal() {
-    modal.style.display = "none";
+function nextSlide() {
+	if(slideIndex <= slides.length)
+	{
+	slideIndex = slideIndex + 1;
+		if(slideIndex > slides.length)
+		{
+		slideIndex = 1;
+		}
+	}
+	captionText.innerHTML = "Image " + slideIndex;
+}
+function prevSlide() {
+	if(slideIndex >= 1)
+	{
+	slideIndex = slideIndex - 1;
+		if(slideIndex < 1)
+		{
+		slideIndex = slides.length;
+		}
+	}
+	captionText.innerHTML = "Image " + slideIndex;
+}
+
+function selectImg(currentSlide) {
+
+	if(event.target.tagName == "IMG")
+	{
+	showModal()
+	galImg.src = event.target.src.replace(".jpg", "_HR.jpg");
+	captionText.innerHTML = event.target.alt + slideIndex;
+	}
+}
+
+function showModal() {
+  document.getElementById('modalDisp').style.display = "block";
+}
+
+function hideModal() {
+  document.getElementById('modalDisp').style.display = "none";
 }
