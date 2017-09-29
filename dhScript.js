@@ -85,43 +85,37 @@ var galImg = document.getElementById('modalImg');
 var captionText = document.getElementById("imgCaption");
 var slides = document.getElementsByClassName("im-single");
 
-var slideIndex;
+var slideIndex = 0;
 
-function currentSlide(n) {
-slideIndex = n;
+function selectImg(n) {
+	slideIndex = n;
+	showModal()
+	galImg.src = slides[n].children[0].src.replace(".jpg", "_HR.jpg");
+	captionText.innerHTML =  slides[n].children[0].alt + " " + slideIndex;
 }
 
 function nextSlide() {
-	if(slideIndex <= slides.length)
+	if(slideIndex <= (slides.length - 1))
 	{
 	slideIndex = slideIndex + 1;
-		if(slideIndex > slides.length)
+		if(slideIndex == slides.length)
 		{
-		slideIndex = 1;
+		slideIndex = 0;
 		}
 	}
-	captionText.innerHTML = "Image " + slideIndex;
+	selectImg(slideIndex)
 }
+
 function prevSlide() {
-	if(slideIndex >= 1)
+	if(slideIndex >= 0)
 	{
 	slideIndex = slideIndex - 1;
-		if(slideIndex < 1)
+		if(slideIndex < 0)
 		{
-		slideIndex = slides.length;
+		slideIndex = slides.length - 1;
 		}
 	}
-	captionText.innerHTML = "Image " + slideIndex;
-}
-
-function selectImg(currentSlide) {
-
-	if(event.target.tagName == "IMG")
-	{
-	showModal()
-	galImg.src = event.target.src.replace(".jpg", "_HR.jpg");
-	captionText.innerHTML = event.target.alt + slideIndex;
-	}
+	selectImg(slideIndex)
 }
 
 function showModal() {
