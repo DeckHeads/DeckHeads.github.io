@@ -275,6 +275,7 @@ button:focus{
 	margin: auto;
 	user-select: none;
 	z-index: 2;
+	background-color: white;
 }
 #imgCaption {
     margin: auto;
