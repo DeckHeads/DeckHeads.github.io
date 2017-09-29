@@ -317,6 +317,7 @@ iframe{
 	right:5vw;
 	padding-right:0;
 	padding-left:0;
+	font-size: 60px;
 	}
 .prev:hover, .next:hover, .close:hover {
 	color: #fb9601; 
@@ -343,6 +344,9 @@ iframe{
     	margin-left: 25%;
     	z-index: 3;
     	}
+    .prev, .next{
+    	top:80%;
+    }
     ul#navMenu li{
     	font-size: 27px;
     	}
