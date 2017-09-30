@@ -88,7 +88,11 @@ var slideIndex = 0;																/*Keep track of the current slide*/
 
 function selectImg(n) { 														/*when image clicked, take the slide number from html*/
 	slideIndex = n;																/*is used when changing slide*/
-	document.getElementById("loading").style.display = "block";
+	if(galImg.complete == false)												/*check if image is loaded*/
+	{
+		document.getElementById("loading").style.display = "block";
+	}
+	
 	if(document.getElementById('modalDisp').style.display = "none")				/*avoid doing the next step for no reason*/
 	{
 		showModal()																/*show the gallery*/
