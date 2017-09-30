@@ -275,9 +275,6 @@ button:focus{
 	background-color: white;
 	opacity: 1;
 }
-.modalImgBox img[data-src] {
-  opacity: 0;
-}
 #imgCaption {
     margin: auto;
     display: block;

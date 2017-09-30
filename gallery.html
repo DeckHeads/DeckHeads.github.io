@@ -112,11 +112,12 @@
 			<p style="text-align: right; color:#000000; font-weight:bold;">&#169; Deck Heads 2017</p>
 		</div>	
 	</div>
-	<div id="modalDisp" class="modal">
-				<div class="close" onclick="hideModal()"> X </div>
-				<div class="prev" onclick="prevSlide()"> < </div>
-				<div class="next" onclick="nextSlide()"> > </div>
+	<div id="modalDisp" class="modal" style="clear:both;">
+		<div class="close" onclick="hideModal()"> X </div>
+		<div class="prev" onclick="prevSlide()"> < </div>
+		<div class="next" onclick="nextSlide()"> > </div>
 		<div class="modalImgBox">
+			<div id="loading" style="display: block; background-color:white; width:100px;text-align: center; position: absolute; top: 40vh; left: calc(50vw - 50px);">loading</div>
 			<img src="" id="modalImg">
 		</div>
 		<div id="imgCaption"></div>
