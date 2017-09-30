@@ -88,20 +88,19 @@ var slideIndex = 0;																/*Keep track of the current slide*/
 
 function selectImg(n) { 														/*when image clicked, take the slide number from html*/
 	slideIndex = n;																/*is used when changing slide*/
-	if(galImg.complete == false)												/*check if image is loaded*/
-	{
-		document.getElementById("loading").style.display = "block";
-	}
-	
 	if(document.getElementById('modalDisp').style.display = "none")				/*avoid doing the next step for no reason*/
 	{
 		showModal()																/*show the gallery*/
 	}
+	galImg.src = slides[n].children[0].src.replace(".jpg", "_HR.jpg");			/*set the gallery <img> tag to the _HR.jpg (hi rez) varient of an image */
+	captionText.innerHTML =  slides[n].children[0].alt + " " + slideIndex;		/*set caption to the image's alt="text"*/
+	if(galImg.complete == false)												/*check if image is loaded*/
+	{
+		document.getElementById("loading").style.display = "block";
+	}
 	galImg.addEventListener("load", function(){
 		document.getElementById("loading").style.display = "none";
 	});
-	galImg.src = slides[n].children[0].src.replace(".jpg", "_HR.jpg");			/*set the gallery <img> tag to the _HR.jpg (hi rez) varient of an image */
-	captionText.innerHTML =  slides[n].children[0].alt + " " + slideIndex;		/*set caption to the image's alt="text"*/
 }
 
 function nextSlide() {															/*do i need to explain this? checks we aren't at an index that would result in null*/
