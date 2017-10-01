@@ -81,6 +81,7 @@ function calcProd6() {
 }
 
 /*Gallery!*/
+var modal = document.getElementById('modalDisp');
 var galImg = document.getElementById('modalImg'); 								/*select the <img> tag for use later*/
 var captionText = document.getElementById("imgCaption"); 						/*select the caption div for use later*/
 var slides = document.getElementsByClassName("im-single"); 						/*create an index of slides*/
@@ -88,7 +89,7 @@ var slideIndex = 0;																/*Keep track of the current slide*/
 
 function selectImg(n) { 														/*when image clicked, take the slide number from html*/
 	slideIndex = n;																/*is used when changing slide*/
-	if(document.getElementById('modalDisp').style.display = "none")				/*avoid doing the next step for no reason*/
+	if(modal.style.display = "none")											/*avoid doing the next step for no reason*/
 	{
 		showModal()																/*show the gallery*/
 	}
@@ -128,9 +129,16 @@ function prevSlide() {															/*same as above really*/
 }
 
 function showModal() {
-  document.getElementById('modalDisp').style.display = "block";
+  modal.style.display = "block";
+
 }
 
 function hideModal() {
-  document.getElementById('modalDisp').style.display = "none";
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        hideModal();
+    }
 }
