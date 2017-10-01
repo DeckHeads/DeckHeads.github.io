@@ -326,10 +326,7 @@ button:focus{
     	overflow:hidden;
     }
     .modalContent{
-		position: absolute;
-		bottom:0;
 		width: 100vw;
-		max-height: calc(100vh - 30px);
 		}
 	.caption{
 		position: absolute;
