@@ -322,20 +322,21 @@ button:focus{
     }
     .modalContent{
 		position: absolute;
-		bottom:0;
+		bottom:50px;
 		width: 100vw;
 		max-height: calc(100vh - 30px);
 		}
 	.caption{
 		position: absolute;
-		top:0;
-		width:100vw;
-		height:70px;
-		padding:0;
-		background-color: rgba(0,0,0, 1);			
+		top:0px;
+		width: calc(100vw - 72px);
+		height: 48px;
+		padding: 24px 0px 0px 0px;
+		background-color: rgba(0,0,0, 0.35);			
 		}
 	.close{
 		top:50px;
+		border-radius: 0 0 0 0;
 		}
     ul#navMenu li{
     	font-size: 27px;
