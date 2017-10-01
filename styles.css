@@ -124,6 +124,11 @@ ul#navMenu li a:hover{
 	height:100%;
 	float: left;
 	}
+iframe{
+	width:100%; 
+	height:315px;
+	border:0;
+}
 /**Products Layout**/
 p.prodCost{
 	display: inline-block;
@@ -348,8 +353,6 @@ button:focus{
 		height: 650px;
 		}
 	}
-
-
 /**Footer**/
 .footerPad{
 	clear: both;
