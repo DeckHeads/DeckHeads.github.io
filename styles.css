@@ -322,7 +322,7 @@ button:focus{
     }
     .modalContent{
 		position: absolute;
-		bottom:50px;
+		bottom:100px;
 		width: 100vw;
 		max-height: calc(100vh - 30px);
 		}
