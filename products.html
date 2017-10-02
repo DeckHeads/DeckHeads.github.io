@@ -5,6 +5,11 @@
 	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<meta charset="UTF-8">
+	<style>
+		#prodLen, #prodWid {
+			width: 100%;
+		}
+	</style>
 </head>
 <body>
 <!--Navigation Bar-->
@@ -26,11 +31,25 @@
 <!--Wrapper-->
 	<div id="wrapper">
 		<div class="prodInfo">
-			<p>
-				<u>Important Information</u>
-				<br><br>
-				Some decks may be exempt from development and or building approval, for more information click <a class="link" href="http://www.planning.act.gov.au/topics/design-and-build/da_assessment/exempt_work/process/decks">here.</a>
-			</p>
+			<div class="innerCol" style="width:68%;">
+				<p>
+					<b>Calculate the cost of an upcoming project!</b>
+					<br>
+					Enter the length and width of a deck you're planning to get a rough estimate of price, and compare the different options available.
+				</p>
+				<p>
+					<b>Important Information</b>
+					<br>
+					Some decks may be exempt from development and or building approval, for more information click <a class="link" href="http://www.planning.act.gov.au/topics/design-and-build/da_assessment/exempt_work/process/decks">here.</a>
+				</p>
+			</div>
+			<div class="innerCol" style="width:32%;">
+				<p>
+					Enter Length(meters): <input type="text" name="length" value="" id="prodLen"><br><br>
+					Enter Width  (meters): <input type="text" name="width" value="" id="prodWid"><br><br>
+					<button type="button" onclick="deckSize()">Calculate Price</button>
+				</p>
+			</div>
 		</div>
 <!--Product 1-->
 		<div class="prodLeft">
@@ -45,19 +64,17 @@
 				</tr>				
 				<tr class="calc">
 					<td>
-						Enter Length(meters): <input type="text" name="length" value="" id="prod1Len"><br><br>
-						Enter Width  (meters): <input type="text" name="width" value="" id="prod1Wid">
+						Product Specs?
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						<br>
-						<button type="button" onclick="calcProd1()">Calculate Price</button>
+						<span id="merbau">calculated cost?</span>
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						Approximate price: <p class="prodCost" id="prod1Cost">$0.00</p>
+						something else?
 					</td>
 				</tr>
 			</table>
@@ -75,19 +92,17 @@
 				</tr>				
 				<tr class="calc">
 					<td>
-						Enter Length(meters): <input type="text" name="length" value="" id="prod2Len"><br><br>
-						Enter Width  (meters): <input type="text" name="width" value="" id="prod2Wid">
+						Product Specs?
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						<br>
-						<button type="button" onclick="calcProd2()">Calculate Price</button>
+						<span id="pine">calculated cost?</span>
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						Approximate price: <p class="prodCost" id="prod2Cost">$0.00</p>
+						something else?
 					</td>
 				</tr>
 			</table>
@@ -105,19 +120,17 @@
 				</tr>				
 				<tr class="calc">
 					<td>
-						Enter Length(meters): <input type="text" name="length" value="" id="prod3Len"><br><br>
-						Enter Width  (meters): <input type="text" name="width" value="" id="prod3Wid">
+						Product Specs?
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						<br>
-						<button type="button" onclick="calcProd3()">Calculate Price</button>
+						<span id="ekodeck">calculated cost?</span>
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						Approximate price: <p class="prodCost" id="prod3Cost">$0.00</p>
+						something else?
 					</td>
 				</tr>
 			</table>
@@ -135,19 +148,17 @@
 				</tr>				
 				<tr class="calc">
 					<td>
-						Enter Length(meters): <input type="text" name="length" value="" id="prod4Len"><br><br>
-						Enter Width  (meters): <input type="text" name="width" value="" id="prod4Wid">
+						Product Specs?
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						<br>
-						<button type="button" onclick="calcProd4()">Calculate Price</button>
+						<span id="merbau">calculated cost?</span>
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						Approximate price: <p class="prodCost" id="prod4Cost">$0.00</p>
+						something else?
 					</td>
 				</tr>
 			</table>
@@ -165,19 +176,17 @@
 				</tr>				
 				<tr class="calc">
 					<td>
-						Enter Length(meters): <input type="text" name="length" value="" id="prod5Len"><br><br>
-						Enter Width  (meters): <input type="text" name="width" value="" id="prod5Wid">
+						Product Specs?
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						<br>
-						<button type="button" onclick="calcProd5()">Calculate Price</button>
+						<span id="merbau">calculated cost?</span>
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						Approximate price: <p class="prodCost" id="prod5Cost">$0.00</p>
+						something else?
 					</td>
 				</tr>
 			</table>
@@ -195,19 +204,17 @@
 				</tr>				
 				<tr class="calc">
 					<td>
-						Enter Length(meters): <input type="text" name="length" value="" id="prod6Len"><br><br>
-						Enter Width  (meters): <input type="text" name="width" value="" id="prod6Wid">
+						Product Specs?
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						<br>
-						<button type="button" onclick="calcProd6()">Calculate Price</button>
+						<span id="merbau">calculated cost?</span>
 					</td>
 				</tr>
 				<tr class="calc">
 					<td>
-						Approximate price: <p class="prodCost" id="prod6Cost">$0.00</p>
+						something else?
 					</td>
 				</tr>
 			</table>

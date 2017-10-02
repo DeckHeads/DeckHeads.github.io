@@ -1,50 +1,72 @@
 var screws250 = 71;
 var screws500 = 115;
 var merbauW = 0.09;
-var merbauP = 4.77;
+var merbauP = 4.98;
+var pineW = 0.09;
+var pineL = 5.4;
+var pineP = 12.67 / pineL;
+var ekoDeckW = 0.088;
+var ekoDeckL = 5.4;
+var ekoDeckP = 46.45 / ekoDeckL;
 var tax = 1.1;
 var delivery = 200;
-var mod = 2.2;
+var mod = 2.5;
 
-function calcProd1() {
+function deckSize(){
+	var dLength = document.getElementById("prodLen").value;
+	var dWidth = document.getElementById("prodWid").value;
+
+	calcMerbau(dLength, dWidth)
+	calcPine(dLength, dWidth)
+	calcEkoDeck(dLength, dWidth)
+}
+
+function calcMerbau(l, w) {
 	var dPrice = 0;
-	/*Get dimentions*/
-	dLength = document.getElementById("prod1Len").value;
-	dWidth = document.getElementById("prod1Wid").value;
 	/*Calculate Price*/	
-	if(dLength*dWidth <= 15 && dLength*dWidth > 0)
+	if(l*w <= 15 && l*w > 0)
 	{
-		dPrice = ((((dWidth/merbauW)*(dLength)*merbauP)*tax)+delivery+screws250)*mod;
+		dPrice = ((((w/merbauW)*(l)*merbauP)+delivery+screws250)*tax)*mod;
 	}
-	if(dLength*dWidth > 15)
+	if(l*w > 15)
 	{
-		dPrice = ((((dWidth/merbauW)*(dLength)*merbauP)*tax)+delivery+screws500)*mod;
+		dPrice = ((((w/merbauW)*(l)*merbauP)+delivery+screws500)*tax)*mod;
 	}	
 	var dOutput = dPrice.toFixed(2);
 	/*Display Price*/
-	document.getElementById("prod1Cost").innerHTML = "$" + dOutput;
+	document.getElementById("merbau").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
 }
 
-function calcProd2() {
-	/*Get dimentions*/
-	var dLength = document.getElementById("prod2Len").value;
-	var dWidth = document.getElementById("prod2Wid").value;
-	/*Calculate Price*/	
-	var dPrice = dLength*dWidth;
+function calcPine(l, w) {
+	var dPrice = 0;
+
+	if(l*w <= 15 && l*w > 0)
+	{
+		dPrice = ((((w/pineW)*(l)*pineP)+delivery+screws250)*tax)*mod;
+	}
+	if(l*w > 15)
+	{
+		dPrice = ((((w/pineW)*(l)*pineP)+delivery+screws500)*tax)*mod;
+	}	
 	var dOutput = dPrice.toFixed(2);
-	/*Display Price*/	
-	document.getElementById("prod2Cost").innerHTML = "$" + dOutput;
+
+	document.getElementById("pine").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
 }
 
-function calcProd3() {
-	/*Get dimentions*/
-	var dLength = document.getElementById("prod3Len").value;
-	var dWidth = document.getElementById("prod3Wid").value;
-	/*Calculate Price*/	
-	var dPrice = dLength*dWidth;
+function calcEkoDeck(l, w) {
+	var dPrice = 0;
+
+	if(l*w <= 15 && l*w > 0)
+	{
+		dPrice = ((((w/ekoDeckW)*(l)*ekoDeckP)+delivery+screws250)*tax)*mod;
+	}
+	if(l*w > 15)
+	{
+		dPrice = ((((w/ekoDeckW)*(l)*ekoDeckP)+delivery+screws500)*tax)*mod;
+	}	
 	var dOutput = dPrice.toFixed(2);
-	/*Display Price*/	
-	document.getElementById("prod3Cost").innerHTML = "$" + dOutput;
+	
+	document.getElementById("ekodeck").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
 }
 
 function calcProd4() {
@@ -55,7 +77,7 @@ function calcProd4() {
 	var dPrice = dLength*dWidth;
 	var dOutput = dPrice.toFixed(2);
 	/*Display Price*/	
-	document.getElementById("prod4Cost").innerHTML = "$" + dOutput;
+	document.getElementById("prod4Cost").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
 }
 
 function calcProd5() {
@@ -66,7 +88,7 @@ function calcProd5() {
 	var dPrice = dLength*dWidth;
 	var dOutput = dPrice.toFixed(2);
 	/*Display Price*/	
-	document.getElementById("prod5Cost").innerHTML = "$" + dOutput;
+	document.getElementById("prod5Cost").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
 }
 
 function calcProd6() {
@@ -77,7 +99,7 @@ function calcProd6() {
 	var dPrice = dLength*dWidth;
 	var dOutput = dPrice.toFixed(2);
 	/*Display Price*/	
-	document.getElementById("prod6Cost").innerHTML = "$" + dOutput;
+	document.getElementById("prod6Cost").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
 }
 
 /*Gallery!*/

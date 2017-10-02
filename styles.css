@@ -130,20 +130,11 @@ iframe{
 	border:0;
 }
 /**Products Layout**/
-p.prodCost{
-	display: inline-block;
-	font-weight:bold;
-	margin-left: 0;
-	padding-left: 0;
-	text-align: right;
-	}
 .prodInfo{
 	position: relative;
 	background-color: white;
-	font-size:25px;
-	font-weight: bold;
+	font-size:16px;
 	width: 93.334%;
-	height: 150px;
 	margin-top:55px;
 	margin-left:3.33%;
 	border-radius: 10px 10px 10px 10px;
@@ -208,7 +199,7 @@ button {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-	width: 80%;
+	width: 100%;
 	}
 button:hover{
 	background-color: #FFFFFF;
