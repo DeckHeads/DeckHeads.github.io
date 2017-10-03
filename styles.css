@@ -369,6 +369,20 @@ button:focus{
 		height: 650px;
 		}
 	}
+@media only screen and (min-height:1px) and (max-height: 870px) {
+	.caption{
+		position: absolute;
+		top:0px;
+		width: calc(100% - 72px);
+		height: 48px;
+		padding: 24px 0px 0px 0px;
+		background-color: rgba(0,0,0, 0.35);			
+		}
+	.close{
+		top:50px;
+		border-radius: 0 0 0 0;
+		}
+	}
 /**Footer**/
 .footerPad{
 	clear: both;

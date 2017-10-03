@@ -12,97 +12,37 @@ var tax = 1.1;
 var delivery = 200;
 var mod = 2.5;
 
+/*Products*/
 function deckSize(){
 	var dLength = document.getElementById("prodLen").value;
 	var dWidth = document.getElementById("prodWid").value;
+	var merbauDisplay =  document.getElementById("merbau");
+	var ekodeckDisplay = document.getElementById("ekodeck");
+	var pineDisplay = document.getElementById("pine");
 
-	calcMerbau(dLength, dWidth)
-	calcPine(dLength, dWidth)
-	calcEkoDeck(dLength, dWidth)
+	merbauDisplay.innerHTML = calcPrice(dLength, dWidth, merbauW, merbauP)
+	ekodeckDisplay.innerHTML = calcPrice(dLength, dWidth, ekoDeckW, ekoDeckP)
+	pineDisplay.innerHTML = calcPrice(dLength, dWidth, pineW, pineP)
 }
-
-function calcMerbau(l, w) {
+/* Calculate Price*/
+function calcPrice(l, w, prodW, price) {
 	var dPrice = 0;
-	/*Calculate Price*/	
-	if(l*w <= 15 && l*w > 0)
-	{
-		dPrice = ((((w/merbauW)*(l)*merbauP)+delivery+screws250)*tax)*mod;
-	}
-	if(l*w > 15)
-	{
-		dPrice = ((((w/merbauW)*(l)*merbauP)+delivery+screws500)*tax)*mod;
-	}	
-	var dOutput = dPrice.toFixed(2);
-	/*Display Price*/
-	document.getElementById("merbau").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
-}
-
-function calcPine(l, w) {
-	var dPrice = 0;
+	var sqM = (l*w).toFixed(2);
 
 	if(l*w <= 15 && l*w > 0)
 	{
-		dPrice = ((((w/pineW)*(l)*pineP)+delivery+screws250)*tax)*mod;
+		dPrice = ((((w/prodW)*(l)*price)+delivery+screws250)*tax)*mod;
 	}
 	if(l*w > 15)
 	{
-		dPrice = ((((w/pineW)*(l)*pineP)+delivery+screws500)*tax)*mod;
+		dPrice = ((((w/prodW)*(l)*price)+delivery+screws500)*tax)*mod;
 	}	
 	var dOutput = dPrice.toFixed(2);
 
-	document.getElementById("pine").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
+	return (sqM + "&#109;&sup2;" + " = " + "$" + dOutput);
 }
 
-function calcEkoDeck(l, w) {
-	var dPrice = 0;
-
-	if(l*w <= 15 && l*w > 0)
-	{
-		dPrice = ((((w/ekoDeckW)*(l)*ekoDeckP)+delivery+screws250)*tax)*mod;
-	}
-	if(l*w > 15)
-	{
-		dPrice = ((((w/ekoDeckW)*(l)*ekoDeckP)+delivery+screws500)*tax)*mod;
-	}	
-	var dOutput = dPrice.toFixed(2);
-	
-	document.getElementById("ekodeck").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
-}
-
-function calcProd4() {
-	/*Get dimentions*/
-	var dLength = document.getElementById("prod4Len").value;
-	var dWidth = document.getElementById("prod4Wid").value;
-	/*Calculate Price*/	
-	var dPrice = dLength*dWidth;
-	var dOutput = dPrice.toFixed(2);
-	/*Display Price*/	
-	document.getElementById("prod4Cost").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
-}
-
-function calcProd5() {
-	/*Get dimentions*/
-	var dLength = document.getElementById("prod5Len").value;
-	var dWidth = document.getElementById("prod5Wid").value;
-	/*Calculate Price*/	
-	var dPrice = dLength*dWidth;
-	var dOutput = dPrice.toFixed(2);
-	/*Display Price*/	
-	document.getElementById("prod5Cost").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
-}
-
-function calcProd6() {
-	/*Get dimentions*/
-	var dLength = document.getElementById("prod6Len").value;
-	var dWidth = document.getElementById("prod6Wid").value;
-	/*Calculate Price*/	
-	var dPrice = dLength*dWidth;
-	var dOutput = dPrice.toFixed(2);
-	/*Display Price*/	
-	document.getElementById("prod6Cost").innerHTML = l*w + " &#109;&sup2;" + " = " + "$" + dOutput;
-}
-
-/*Gallery!*/
+/*Gallery*/
 var modal = document.getElementById('modalDisp');
 var galImg = document.getElementById('modalImg'); 								/*select the <img> tag for use later*/
 var captionText = document.getElementById("imgCaption"); 						/*select the caption div for use later*/
@@ -125,9 +65,9 @@ function selectImg(n) { 														/*when image clicked, take the slide numbe
 		document.getElementById("loading").style.display = "none";
 	});
 }
-
-function nextSlide() {															/*do i need to explain this? checks we aren't at an index that would result in null*/
-	if(slideIndex <= (slides.length - 1))
+/*Change Slide Forward*/
+function nextSlide() {															
+	if(slideIndex <= (slides.length - 1))										/*do i need to explain this? checks we aren't at an index that would result in null*/
 	{
 	slideIndex = slideIndex + 1;												/*add 1 to slideIndex (to get the next slide later)*/
 		if(slideIndex == slides.length)
@@ -137,7 +77,7 @@ function nextSlide() {															/*do i need to explain this? checks we aren
 	}
 	selectImg(slideIndex)														/*show the image relating to the new slideIndex value*/
 }
-
+/*Change Slide Backward*/
 function prevSlide() {															/*same as above really*/
 	if(slideIndex >= 0)
 	{
@@ -149,16 +89,16 @@ function prevSlide() {															/*same as above really*/
 	}
 	selectImg(slideIndex)
 }
-
+/*Show the gallery large image*/
 function showModal() {
   modal.style.display = "block";
 
 }
-
+/*Hide the gallery large image*/
 function hideModal() {
   modal.style.display = "none";
 }
-
+/*Hide the gallery large image when clicking outside of the image area*/
 window.onclick = function(event) {
     if (event.target == modal) {
         hideModal();
