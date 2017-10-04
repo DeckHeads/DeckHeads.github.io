@@ -92,6 +92,7 @@ ul#navMenu li a:hover{
 	width: 100%;
 	height: auto;
 	min-width: 750px;
+	background-color: gray;
 	background-image: url("images/bgtile1.jpg");
 	z-index:-1;
 	}
