@@ -340,6 +340,12 @@ button:focus{
 /*loading*/
 /**Mobile Displays**/
 @media only screen and (min-width:1px) and (max-width: 1100px) {
+    #mainLeft {
+	height: 700px;
+	}
+	#mainRight {
+	height: 700px;
+	}
     .modal {
     	overflow:hidden;
     }
@@ -364,9 +370,6 @@ button:focus{
     ul#navMenu{
     	margin-top:5px;
     	}
-    #footerExtraPad{
-		height: 650px;
-		}
 	}
 @media only screen and (min-height:1px) and (max-height: 870px) {
 	.caption{
