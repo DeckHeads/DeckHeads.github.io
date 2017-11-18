@@ -8,6 +8,9 @@ var pineP = 12.67 / pineL;
 var ekoDeckW = 0.088;
 var ekoDeckL = 5.4;
 var ekoDeckP = 46.45 / ekoDeckL;
+var gumW = 0.135;
+var gumP = 10.98;
+
 var tax = 1.1;
 var delivery = 200;
 var mod = 2.5;
@@ -19,10 +22,16 @@ function deckSize(){
 	var merbauDisplay =  document.getElementById("merbau");
 	var ekodeckDisplay = document.getElementById("ekodeck");
 	var pineDisplay = document.getElementById("pine");
+	var gumDisplay = document.getElementById("mixausgum");
+	var orgDisplay = document.getElementById("organoil");
+	var acrylDisplay = document.getElementById("acrylic");
 
 	merbauDisplay.innerHTML = calcPrice(dLength, dWidth, merbauW, merbauP)
 	ekodeckDisplay.innerHTML = calcPrice(dLength, dWidth, ekoDeckW, ekoDeckP)
 	pineDisplay.innerHTML = calcPrice(dLength, dWidth, pineW, pineP)
+	gumDisplay.innerHTML = calcPrice(dLength, dWidth, gumW, gumP)
+	orgDisplay.innerHTML = calcPrice(dLength, dWidth, pineW, pineP)
+	acrylDisplay.innerHTML = calcPrice(dLength, dWidth, pineW, pineP)
 }
 /* Calculate Price*/
 function calcPrice(l, w, prodW, price) {
