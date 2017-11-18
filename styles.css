@@ -93,14 +93,14 @@ ul#navMenu li a:hover{
 	height: auto;
 	min-width: 750px;
 	background-color: gray;
-	background-image: url("images/bgtile1.jpg");
+	background-image: url("images/bgweb.jpg");
 	z-index:-1;
 	}
 /**Home Layout**/
 #mainLeft{
 	position: relative;
 	width: 54%;
-	height: 750px;
+	height: 500px;
 	margin-top: 55px;
 	margin-left: 3.33%;
 	background-color: #ffffff;
@@ -111,7 +111,7 @@ ul#navMenu li a:hover{
 #mainRight{
 	position: relative;
 	width: 36%;
-	height: 750px;
+	height: 500px;
 	margin-top: 55px;
 	margin-right: 3.33%;
 	background-color: #ffffff;
@@ -211,6 +211,9 @@ button:hover{
 button:focus{ 
 	outline: none;
 	}
+.price{
+	font-weight: bold;
+}
 /**Gallery Layout**/
 .galleryWrap {
 	position: relative;
@@ -326,11 +329,6 @@ button:focus{
   	-webkit-animation: spin 1s ease-out infinite;
   	animation: spin 1s ease-out infinite;
 	}
-.loader:hover{
- 	border: 16px solid #fb9601;
-  	border-top: 16px solid rgba(0,0,0,0);
-  	border-bottom: 16px solid rgba(0,0,0,0);
-	}
 @-webkit-keyframes spin {
   	0% { -webkit-transform: rotate(0deg); }
   	100% { -webkit-transform: rotate(360deg); }
@@ -388,7 +386,7 @@ button:focus{
 .footerPad{
 	clear: both;
 	height: 250px;
-}
+	}
 .miniWrapper {
 	position: absolute;
 	width: 100%;

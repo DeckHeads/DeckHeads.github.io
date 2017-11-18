@@ -56,7 +56,7 @@ function selectImg(n) { 														/*when image clicked, take the slide numbe
 		showModal()																/*show the gallery*/
 	}
 	galImg.src = slides[n].children[0].src.replace(".jpg", "_HR.jpg");			/*set the gallery <img> tag to the _HR.jpg (hi rez) varient of an image */
-	captionText.innerHTML =  slides[n].children[0].alt + " " + slideIndex;		/*set caption to the image's alt="text"*/
+	captionText.innerHTML =  slides[n].children[0].alt;							/*set caption to the image's alt="text"*/
 	if(galImg.complete == false)												/*check if image is loaded*/
 	{
 		document.getElementById("loading").style.display = "block";
